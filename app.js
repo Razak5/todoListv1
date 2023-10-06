@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");  //1.require mongoose
 const { name } = require("ejs");
 var _= require("lodash")
+const PORT = process.env.PORT || 3030;
  
 const app = express();
 //let item1 ="";
@@ -169,5 +170,5 @@ app.get("/about", function(req, res){
 })                                                                                                                                                                                                                                                                                                                                                                                                                                             //res.render ("list", {day: day} );                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
 app.listen(3000, function(){
-    console.log("server on port 3000")
+    console.log(`server on port ${PORT}`);
 });
